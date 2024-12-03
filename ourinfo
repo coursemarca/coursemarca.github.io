@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information - CourseChris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Course<span>Chris</span></h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="ourarticle" class="nav-link">Article</a>
+            <a href="ourinfo" class="nav-link exclusive">Information</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-information">
+        <div class="hero-content">
+            <h2>Jelajahi Dunia Belajar Tanpa Batas</h2>
+            <p>Platform belajar dengan akses mudah untuk semua tingkat pendidikan.</p>
+            <button class="cta-button">Mulai Sekarang</button>
+        </div>
+    </section>
+
+    <!-- Statistik -->
+    <section class="statistics">
+        <h2>Statistik Kami</h2>
+        <div class="stats-container">
+            <div class="stat">
+                <i class="fas fa-user-graduate"></i>
+                <h3 id="users">0</h3>
+                <p>Pengguna Terdaftar</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-book"></i>
+                <h3 id="courses">0</h3>
+                <p>Kursus Tersedia</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-star"></i>
+                <h3 id="satisfaction">0%</h3>
+                <p>Tingkat Kepuasan</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Pertanyaan Umum</h2>
+        <div class="faq-item">
+            <h3>Apa itu CourseChris? <i class="fas fa-chevron-down"></i></h3>
+            <p>CourseChris adalah platform yang menyediakan berbagai materi belajar untuk meningkatkan kemampuan Anda.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Bagaimana cara mendaftar? <i class="fas fa-chevron-down"></i></h3>
+            <p>Klik tombol "Daftar" di halaman utama, lalu ikuti langkah-langkah sederhana yang disediakan.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Apa saja mata pelajaran yang tersedia? <i class="fas fa-chevron-down"></i></h3>
+            <p>Kami menawarkan Bahasa Inggris, Matematika, dan berbagai bahasa pemrograman modern.</p>
+        </div>
+    </section>    
+    
+
+    <!-- Tutor Slider -->
+    <section class="tutors">
+        <h2>Tim Tutor Kami</h2>
+        <div class="tutors-slider">
+            <div class="tutor">
+                <img src="tutor1.jpg" alt="Tutor 1">
+                <h3>John Doe</h3>
+                <p>Ahli Bahasa Inggris</p>
+            </div>
+            <div class="tutor">
+                <img src="tutor2.jpg" alt="Tutor 2">
+                <h3>Jane Smith</h3>
+                <p>Ahli Matematika</p>
+            </div>
+            <div class="tutor">
+                <img src="tutor3.jpg" alt="Tutor 3">
+                <h3>Emily Johnson</h3>
+                <p>Ahli Pemrograman</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Course<span>Chris</span></h3>
+            <nav class="footer-nav">
+                <a href="index.html" class="nav-link">Home</a>
+            <a href="ourarticle" class="nav-link">Article</a>
+            <a href="ourinfo" class="nav-link exclusive">Information</a>
+            </nav>
+            <p>Platform untuk mempelajari Bahasa, Matematika, dan Pemrograman dengan mudah dan murah.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

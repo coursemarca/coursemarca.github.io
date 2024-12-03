@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* Tambahkan styling untuk bubble chat dan efek loading */
+        .chat-container {
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .bubble {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: #e1e1e1;
+            max-width: 70%;
+        }
+        .user { background-color: #d1ecf1; text-align: right; }
+        .bot { background-color: #f8d7da; }
+        .loading { display: none; font-style: italic; color: gray; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-box"></div>
+        <div class="loading" id="loading">Bot is typing...</div>
+        <input type="text" id="user-input" placeholder="Type your question..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const loading = document.getElementById('loading');
+
+        function sendMessage() {
+            const query = userInput.value.trim();
+            if (!query) return;
+            
+            addMessage(query, 'user');
+            userInput.value = '';
+
+            loading.style.display = 'block';
+            fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                loading.style.display = 'none';
+                addMessage(data.response, 'bot');
+            });
+        }
+
+        function addMessage(message, type) {
+            const bubble = document.createElement('div');
+            bubble.className = `bubble ${type}`;
+            bubble.innerText = message;
+            chatBox.appendChild(bubble);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>

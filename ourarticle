@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - CourseChris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-background"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h1>Course<span>Chris</span></h1>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="ourarticle" class="nav-link active">Article</a>
+            <a href="ourinfo" class="nav-link exclusive">Information</a>
+        </nav>
+    </header>
+
+    <!-- Navigation for Article Categories -->
+    <section class="article-navigation">
+        <nav class="category-nav">
+            <button class="category-button" data-category="all">All</button>
+            <button class="category-button" data-category="study">Study</button>
+            <button class="category-button" data-category="iq">IQ</button>
+            <button class="category-button" data-category="elementary">Elementary</button>
+            <button class="category-button" data-category="psychological">Psychological</button>
+            <button class="category-button" data-category="junior-school">Junior School</button>
+            <button class="category-button" data-category="high-school">High School</button>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search articles...">
+            <button id="search-button">Search</button>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-section" id="articles-container">
+        <!-- Articles will be dynamically populated here -->
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Course<span>Chris</span></h3>
+            <nav class="footer-nav">
+                <a href="index.html" class="nav-link">Home</a>
+            <a href="ourarticle" class="nav-link">Article</a>
+            <a href="ourinfo" class="nav-link exclusive">Information</a>
+            </nav>
+            <p>Platform untuk mempelajari Bahasa, Matematika, dan Pemrograman dengan mudah dan murah.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
